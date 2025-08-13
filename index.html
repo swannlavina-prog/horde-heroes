@@ -1,33 +1,19 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <meta name="theme-color" content="#111827">
-  <title>Horde Heroes — Browser Game</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.webmanifest">
-  <script defer src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
-  <script defer src="game.js"></script>
-</head>
-<body>
-  <noscript>This game needs JavaScript enabled.</noscript>
-  <div id="game"></div>
-  <button id="btn-full">⛶</button>
-  <button id="btn-pause">⏸</button>
-  <script>
-    // fullscreen & pause buttons
-    const fullBtn = document.getElementById('btn-full');
-    fullBtn.addEventListener('click', ()=>{
-      const el = document.documentElement;
-      if (!document.fullscreenElement) { el.requestFullscreen?.(); } else { document.exitFullscreen?.(); }
-    });
-    const pauseBtn = document.getElementById('btn-pause');
-    pauseBtn.addEventListener('click', ()=>{
-      window.__PAUSE_TOGGLE__ && window.__PAUSE_TOGGLE__();
-    });
-    // service worker
-    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
-  </script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Horde Heroes — Pages Safe</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+    <style>
+      html, body { margin:0; height:100%; background:#0f141b; }
+      #game { width:100vw; height:100vh; }
+      .ui { position:fixed; right:8px; bottom:8px; color:#9ab; font:12px/1.2 ui-sans-serif, system-ui; }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <div class="ui">PC: Arrows/WASD + Space • Touch: buttons</div>
+    <script src="game.js"></script>
+  </body>
 </html>
