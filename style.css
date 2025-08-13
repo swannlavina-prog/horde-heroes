@@ -1,3 +1,5 @@
-
-html, body { margin:0; padding:0; background:#0f151f; height:100%; }
-#game { width:100vw; height:100vh; }
+html,body{margin:0;padding:0;background:#0e1216;height:100%;font-family:monospace;color:#fff}
+#game{width:100vw;height:100vh}
+#hud{position:fixed;bottom:14px;right:14px}
+#fireBtn{padding:14px 22px;font-size:18px;border-radius:10px;border:none;background:#2dd4bf;color:#0b0f14;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+@media (min-width: 900px){#fireBtn{display:none}}
