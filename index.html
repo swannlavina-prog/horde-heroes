@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Horde Heroes</title>
+    <title>Desert Siege — Horde Defense</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
     <style>
-      html,body{margin:0;background:#0f1420;height:100%;}
-      #game{width:100vw;height:100vh;overflow:hidden;}
-      .note{position:fixed;left:8px;bottom:8px;color:#9ab;opacity:.9;font-family:system-ui,ui-sans-serif;font-size:12px}
+      html, body { margin:0; padding:0; background:#0a0c10; height:100%; }
+      #game { width:100vw; height:100vh; overflow:hidden; touch-action: none; }
+      .ui { position:fixed; left:10px; top:10px; font-family:system-ui, sans-serif; color:#fff; font-size:14px; }
+      .btn { position:fixed; right:10px; bottom:10px; padding:10px 14px; border-radius:10px; background:#1f2937; color:#fff; font-weight:600; border:1px solid #374151; }
+      @media (max-width: 700px){
+        .shoot { position: fixed; right: 14px; bottom: 14px; padding: 16px 20px; border-radius: 14px; font-size: 16px; }
+      }
     </style>
   </head>
   <body>
     <div id="game"></div>
-    <div class="note">PC: WASD/Arrows + Space • Touch: D‑pad and Shoot</div>
+    <button class="btn shoot" id="shootBtn">Shoot</button>
     <script src="game.js"></script>
   </body>
 </html>
