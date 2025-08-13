@@ -1,0 +1,6 @@
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#111827;color:#e5e7eb;font-family:system-ui,ui-sans-serif}
+#game{width:100vw;height:100vh;overflow:hidden}
+#btn-full,#btn-pause{position:fixed;right:10px;z-index:10;border:none;background:#1f2937;color:#e5e7eb;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);padding:8px 10px;border-radius:10px;opacity:.75}
+#btn-full{bottom:10px}#btn-pause{bottom:54px}
+#btn-full:active,#btn-pause:active{transform:translateY(1px)}
